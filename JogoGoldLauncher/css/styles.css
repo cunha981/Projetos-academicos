@@ -1,0 +1,427 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%; 
+    background-color: #2c2c2c;
+    position: relative;
+}
+
+.bug-scroll {
+    overflow: hidden;
+}
+
+/* UTILIDADES */
+
+.box {
+    height: 100%;
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.clear {
+    clear: both;
+}
+
+/* CANVAS */
+
+canvas#game {
+    border: 1px solid rgba(0, 0, 0, .8);
+    background: url(../img/bg.jpg) no-repeat;
+    border-radius: 6px;
+}
+
+/* PARÂMETROS */
+
+form.parametros {
+    margin-top: 10px;
+}
+
+fieldset {
+    border: 0;
+}
+
+label.dados {
+    display: inline-block;
+    width: 80px;
+}
+
+/* OUTROS */
+
+#home-game {
+    background-image:url(../img/bgInicial.jpg);
+    width:900px;
+    height:356px;
+}
+
+.btn-game {
+    cursor:pointer;
+    margin-top: 75px;
+    -ms-transform: scale(.93,.93);
+    -webkit-transform: scale(.93,.93);
+    transform: scale(.93,.93);
+    transition: ease all .5s;
+}
+
+.btn-game:hover {
+    -ms-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+}
+
+.btn-minus {
+    float: right;
+    margin-right: 10px;
+}
+
+.btn-close {
+    float: right;
+}
+
+/* #############################################
+
+SITE 
+
+############################################# */
+
+
+/* NAVBAR */ 
+
+.gc {
+    background: #2c2c2c;
+	background: -webkit-linear-gradient(#2c2c2c, #101010);
+	background: -o-linear-gradient(#2c2c2c, #101010);
+	background: -moz-linear-gradient(#2c2c2c, #101010);
+	background: linear-gradient(#101010, transparent);
+}
+
+.navbar {
+    height: 130px;
+    border: 0; /* 1px solid #FFF */
+    padding-top: 40px;
+}
+
+.box-logo-nav { 
+    position: relative;
+    float: left;
+}
+
+@media screen and (max-width: 435px) {
+    .box-logo-nav {
+        transform:scale(.8,.8);
+        margin-top: 4px;
+    }
+}
+@media (min-width: 435px) and (max-width: 768px) {
+    .box-logo-nav {
+        transform:scale(.9,.9);
+        margin-top: 2px;
+    }
+}
+
+.titulo-logo {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    color: #ffcd51;
+    float: left;
+    position: absolute;
+    top: -5px;
+    left: 110px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    position: absolute;
+    padding: 0 15px;
+}
+
+.navbar-brand img {
+    margin-top: -16px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffcd51;
+    font-size: 20px;
+}
+
+@media (min-width: 435px) and (max-width: 768px) {
+    .navbar-inverse .navbar-nav>li>a {
+        font-size: 18px;
+    }
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #ffcd51;
+    background-color: transparent;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f2b22f;
+    transition: all ease .5s;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    transition: all ease .5s;
+}
+
+.barra-degrade {
+    height: 3px;
+	background: #2c2c2c;
+	background: -webkit-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+	background: -o-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+	background: -moz-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+	background: linear-gradient(to right, transparent, #fbc02d, transparent);
+	padding: 0;
+    margin-top: 90px;
+}
+
+@media (max-width: 435px) {
+    /* pra corrigir bug da navbar em resolução mobile */
+    .barra-degrade {
+        margin-top: -7px;
+    }
+    .barra-degrade-mobile {
+        height: 3px;
+        background: #2c2c2c;
+        background: -webkit-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+        background: -o-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+        background: -moz-linear-gradient(right, #2c2c2c, #fbc02d, #2c2c2c);
+        background: linear-gradient(to right, transparent, #fbc02d, transparent);
+        margin-top: 30px;
+    }
+    ul.navbar-nav {
+        background-color: rgba(44, 44, 44, .9); 
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+        z-index: 999;
+    }
+    /* pra corrigir bug da navbar em resolução mobile */
+}
+
+/* HOME */
+
+section#home-site {
+    margin-bottom: 30px;
+}
+
+h2.invite-title {
+    font-size: 36px;
+    color: #fffaee;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 435px) {
+    h2.invite-title {
+        transform:scale(.7,.7);
+    }
+    .aviso-mobile {
+        background-color: #ffcd51;
+        border-radius: 10px;
+        width: 100%;
+        min-height: 100px;
+        height: 100%;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+        padding: 10px 4px 4px 4px;
+        text-align: center;
+        position: relative;
+    }
+}
+
+@media (min-width: 435px) and (max-width: 768px) {
+    .aviso-mobile {
+        background-color: #ffcd51;
+        border-radius: 10px;
+        width: 100%;
+        min-height: 100px;
+        height: 100%;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+        padding: 30px 4px 4px 4px;
+        text-align: center;
+        position: relative;
+    }
+}
+
+.site-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.site-content h3.title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fffaee;
+    border-bottom: 2px solid #fbc02d;
+    max-width: 15%;
+}
+
+.site-content h3#o-jogo.title {
+    width: 70px;
+}
+
+.site-content h3#como-jogar.title {
+    width: 120px;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 435px) {
+    .site-content h3#o-jogo.title {
+        width: 30%;
+        max-width: 100%;
+    }
+    .site-content h3#como-jogar.title {
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 435px and max-width: 768px) {
+    .site-content h3#como-jogar.title {
+        width: 18%;
+        max-width: 100%;
+    }
+}
+
+.site-content p.text {
+    color: #fffaee;
+    font-size: 14px;
+    text-align: justify;
+}
+
+ul.lista-instrucoes {
+    color: #fffaee;
+    list-style-type: none;
+    padding-left: 0;    
+}
+
+ul.lista-instrucoes li {
+    padding-bottom: 10px;
+}
+
+ul.lista-instrucoes li img {
+    margin-right: 5px;
+}
+
+/* SECTION INTEGRANTES */
+
+section#integrantes-site {
+    background-color: #FFF;
+    min-height: 300px;
+    padding-bottom:40px;
+}
+
+h2.integrantes-title {
+    max-width: 200px;
+    font-size: 36px;
+    color: #ffc814;
+    border-bottom: 2px solid #ffc814;
+    margin: 40px auto 20px auto;
+}
+
+@media screen and (max-width: 768px) {
+    h2.integrantes-title {
+        max-width: 180px;
+        font-size: 32px;
+    }
+}
+
+.box-membro {
+    width: 100%;
+    height: auto;
+    margin: 10px auto 20px auto;
+}
+
+.box-membro .img-membro {
+    border-radius: 50%;
+    background-color: #ffc814;
+    width: 175px;
+    height: 175px;
+    margin: 0 auto 10px auto;
+}
+
+.box-membro .img-membro img{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.box-membro .dados-membro {
+    text-align: center;
+}
+
+.dados-membro p.nome-membro {
+    text-decoration: underline;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+footer#rodape-site {
+    height: 150px;
+    background-color: #ffca28;
+    border-top: 10px solid #2c2c2c;
+    margin: 0;
+    padding: 0;
+}
+
+.box-rodape {
+    height: 140px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.creditos-site {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logo-grupo-rodape {
+    display: block;
+}
+
+@media screen and (max-width: 435px) {
+	#rodape-site {
+		height: auto;
+        min-height: 170px;
+        text-align: center;
+	}
+}
+
+@media (min-width: 700px) and (orientation: landscape) {
+    #rodape-site {
+        max-width: 100%;
+        min-height: 150px;
+        height: auto;
+    }
+    .logo-grupo-rodape {
+        margin-right: 55px;
+    }
+}
+
+@media (min-width: 700px) and (orientation: portrait) {
+    #rodape-site {
+        max-width: 100%;
+        min-height: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+input.input-maior {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+select.form-control {
+	font-size: 12px;
+}
+
+a.link-navbar {
+	color:#BECFE0;
+}
+
+a.link-navbar:hover {
+	color:#FFF;
+}
+
+.voluntario-detalhe {
+	margin-top: 6px;
+}
+
+.label-scnc {
+	font-size: 100%;
+}
+
+.logo-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img {
+	width: 600px;
+	height: auto;
+}
+
+/* HOME/DASHBOARD BUTTONS */
+
+.home-buttons {
+	padding: 0 5px 0 0;
+}
+
+.btn-home, .btn-home:focus {
+	background: #239e35;
+	border: 1px solid #85c98f;
+	color: #FFF;
+}
+
+.btn-home:hover, .btn-home:active {
+	background: #85c98f;
+	border: 1px solid #239e35;
+	color: #FFF;
+}
+
+.btn-home.active.focus, .btn-home.active:focus, .btn-home.active:hover, .btn-home:active.focus, .btn-home:active:focus, .btn-home:active:hover, .open>.dropdown-toggle.btn-home.focus, .open>.dropdown-toggle.btn-home:focus, .open>.dropdown-toggle.btn-home:hover {
+	background-color: #398439;
+	border-color: #255625;
+	color: #FFF;
+}
+
+#responsiveTable{
+	margin-bottom: 0px;
+}
+
+/*
+.img-demo img:hover {
+}
+
+input[type=checkbox] {
+	opacity: 0;
+}
+*/
